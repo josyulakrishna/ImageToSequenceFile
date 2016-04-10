@@ -5,6 +5,6 @@ This code creates Hadoop Sequence Files, Requirements: You should install https:
 There are two variations: 1. Without Compression: imgtoseqgray.py , seqtoimggray.py	
 2. With Compression: CompressedSequenceFileReader.py, SequenceFileWriterWithCompression.py
 
-To create the sequence file the arguments to the program have to 'path to the images directory' 'path to save the sequence file' 'extension type(jpg,tiff,png..)'
+To create the sequence file the arguments to the program have to be 'path to the images directory' 'path to save the sequence file' 'extension type(jpg,tiff,png..)'
 Store the created file in hdfs using any library of your choice 
 Skeleton to read the images from Sequencefile is given in CompressedSequenceFileReader and seqtoimggray
