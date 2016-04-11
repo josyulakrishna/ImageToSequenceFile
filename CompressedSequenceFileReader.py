@@ -27,7 +27,10 @@ class SequenceFileReader:
 				name,d1,d2,ext=key.toString().split(".")
 				arr=compression_codec.decompress(value.getBytes())
 				nparr = np.frombuffer(arr, np.uint8)
-				img = cv2.imdecode(nparr, cv2.CV_LOAD_IMAGE_COLOR)
+				try:
+					img = cv2.imdecode(nparr, cv2.CV_LOAD_IMAGE_COLOR)
+				except AttributeError: 
+					img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
 				print name,img.shape
 			reader.close()
 		return seqReader
