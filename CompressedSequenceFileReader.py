@@ -4,6 +4,7 @@ import binascii
 import gzip
 import numpy as np
 import cv2
+import sys
 from hadoop.io import SequenceFile
 from hadoop.io.compress.BZip2Codec import BZip2Codec
 
@@ -37,6 +38,6 @@ class SequenceFileReader:
 
 
 if __name__ == '__main__':
-	path='/Users/josyulakrishna/Downloads/bcimages.seq'
+	path=sys.argv[1]
 	seq=SequenceFileReader(path)
 	seq.run()
