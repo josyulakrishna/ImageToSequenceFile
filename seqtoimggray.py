@@ -5,7 +5,7 @@
 #val = getValue()
 #value = val(uPath)
 #
-import io
+import io,sys
 from cStringIO import StringIO
 import binascii
 import gzip
@@ -41,6 +41,6 @@ class SequenceFileReader:
 
 
 if __name__ == '__main__':
-	path='/Users/josyulakrishna/Downloads/cvucimaged.seq'
+	path=sys.argv[1]
 	seq=SequenceFileReader(path)
 	seq.run()
