@@ -1,14 +1,5 @@
-#seqtoimg
-#Path is the path to hdfs file
-#img=io.BytesIO(value.toString())
-#img=Image.frombytes("RGB", (512,512), img.getvalue())
-#val = getValue()
-#value = val(uPath)
-#
+#! /Users/josyulakrishna/Documents/PythonPackages/anaconda/bin/python
 import io,sys
-from cStringIO import StringIO
-import binascii
-import gzip
 import numpy as np
 import cv2
 from hadoop.io import SequenceFile
